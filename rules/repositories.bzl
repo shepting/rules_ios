@@ -88,7 +88,8 @@ def rules_ios_dependencies(
             sha256 = "1618fc82e556ebc97ea360b8cacd3365ca3b0e0a85ccb32422468204843e752d",
         )
     else:
-        http_archive(
+        _maybe(
+            http_archive,
             name = "build_bazel_rules_apple",
             url = "https://github.com/bazelbuild/rules_apple/releases/download/3.0.0/rules_apple.3.0.0.tar.gz",
             sha256 = "20da675977cb8249919df14d0ce6165d7b00325fb067f0b06696b893b90a55e8",
