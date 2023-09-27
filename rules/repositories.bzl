@@ -49,7 +49,7 @@ def github_repo(name, project, repo, ref, sha256 = None, **kwargs):
 
 def _get_bazel_version():
     bazel_version = getattr(native, "bazel_version", "")
-    if bazel_version:
+        if bazel_version:
         parts = bazel_version.split(".")
         if len(parts) > 2:
             return struct(major = parts[0], minor = parts[1], patch = parts[2])
