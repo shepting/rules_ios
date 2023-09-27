@@ -96,12 +96,19 @@ def rules_ios_dependencies(
         #     repo = "rules_apple",
         #     sha256 = "46186d7ceb726aedce566458b4a3e389fa2b20ce5a714180c74c875fc1a945fb",
         # )
-        _maybe(
-            http_archive,
+        http_archive(
             name = "build_bazel_rules_apple",
-            sha256 = "20da675977cb8249919df14d0ce6165d7b00325fb067f0b06696b893b90a55e8",
             url = "https://github.com/bazelbuild/rules_apple/releases/download/3.0.0/rules_apple.3.0.0.tar.gz",
+            sha256 = "20da675977cb8249919df14d0ce6165d7b00325fb067f0b06696b893b90a55e8",
         )
+        # _maybe(
+        #     github_repo,
+        #     name = "build_bazel_rules_apple",
+        #     sha256 = "20da675977cb8249919df14d0ce6165d7b00325fb067f0b06696b893b90a55e8",
+        #     project = "bazelbuild",
+        #     project = "rules_apple"
+        #     url = "https://github.com/bazelbuild/rules_apple/releases/download/3.0.0/rules_apple.3.0.0.tar.gz",
+        # )
 )
         )
 
